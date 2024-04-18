@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генерация таблицы на JavaScript</title>
+    <style>
+        /* Стили для таблицы */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        /* Стили для ячеек заголовка */
+        th {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+            background-color: #f2f2f2;
+        }
+
+        /* Стили для ячеек тела */
+        td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Стили для четных строк */
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="table-container"></div>
+
+    <script>
+        // Создаем функцию для генерации таблицы
+        function generateTable() {
+            // Получаем ссылку на div, в который мы будем вставлять таблицу
+            let container = document.getElementById("table-container");
+            
+            // Создаем элемент таблицы
+            let table = document.createElement("table");
+            
+            // Создаем заголовок таблицы
+            let header = table.createTHead();
+            let headerRow = header.insertRow();
+            let headers = ["Заголовок 1", "Заголовок 2", "Заголовок 3"];
+            for (let i = 0; i < headers.length; i++) {
+                let th = document.createElement("th");
+                th.appendChild(document.createTextNode(headers[i]));
+                headerRow.appendChild(th);
+            }
+            
+            // Создаем тело таблицы
+            let tbody = document.createElement("tbody");
+            for (let i = 0; i < 5; i++) { // создаем 5 строк
+                let row = tbody.insertRow();
+                for (let j = 0; j < 3; j++) { // каждая строка содержит 3 ячейки
+                    let cell = row.insertCell();
+                    cell.appendChild(document.createTextNode("Ячейка " + (i + 1) + "-" + (j + 1)));
+                }
+            }
+            
+            // Добавляем тело таблицы к таблице
+            table.appendChild(tbody);
+            
+            // Добавляем таблицу к контейнеру
+            container.appendChild(table);
+        }
+
+        // Вызываем функцию для генерации таблицы при загрузке страницы
+        window.onload = generateTable;
+    </script>
+</body>
+</html>

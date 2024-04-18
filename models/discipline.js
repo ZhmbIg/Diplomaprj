@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize"
-import { sequelize } from "./init.js";
+import { sequelize } from "./init.js"
 
 export const Discipline = sequelize.define(
     'discipline',
@@ -20,6 +20,7 @@ export const Discipline = sequelize.define(
     }
 
 )
+
 
 export const DisciplineType = sequelize.define(
     'discipline_type',

@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize"
 import { sequelize } from "./init.js"
+import { Discipline } from "./discipline.js"
 
 export const Student = sequelize.define(
     'student',
@@ -35,20 +36,3 @@ export const Student = sequelize.define(
     }
 )
 
-export const StudentDescipline = sequelize.define(
-    'student_descipline',
-    {
-        student_id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true
-        },
-        descpline_id: {
-            primaryKey: true,
-            type: DataTypes.INTEGER
-        }
-    },
-    {
-        underscored: true
-    }
-
-)

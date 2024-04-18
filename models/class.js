@@ -11,7 +11,7 @@ export const Class = sequelize.define(
         class_type_id: {
             type: DataTypes.INTEGER
         },
-        desciplie_id: {
+        discipline_id: {
             type: DataTypes.INTEGER
         },
         professor_id: {

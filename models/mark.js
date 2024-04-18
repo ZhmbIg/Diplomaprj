@@ -14,7 +14,7 @@ export const Mark = sequelize.define(
         student_id: {
             type: DataTypes.INTEGER
         },
-        desciplie_id: {
+        discipline_id: {
             type: DataTypes.INTEGER
         },
         type_id: {

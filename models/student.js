@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize"
 import { sequelize } from "./init.js"
-import { Discipline } from "./discipline.js"
 
 export const Student = sequelize.define(
     'student',
@@ -35,4 +34,3 @@ export const Student = sequelize.define(
         underscored: true
     }
 )
-

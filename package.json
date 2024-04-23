@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "fixtures": "node fixtures/index.js",
     "start": "nodemon index.js"
   },
   "keywords": [],

@@ -26,3 +26,17 @@ export const Mark = sequelize.define(
     }
 
 )
+
+
+export const MarkType = sequelize.define(
+    "mark_type",
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true
+        },
+        type: {
+            type: DataTypes.STRING,
+        }
+    }
+)

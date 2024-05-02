@@ -31,7 +31,7 @@
             const data = new FormData(form)
             const body = JSON.stringify(Object.fromEntries(data))
             console.log('Hi 1')
-            let response = await fetch('/main', {
+            let response = await fetch('/auth', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

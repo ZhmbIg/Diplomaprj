@@ -9,7 +9,8 @@ export const Student = sequelize.define(
             primaryKey: true
         },
         password: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            allowNull: false
         },
         name: {
             type: DataTypes.STRING
